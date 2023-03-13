@@ -1,5 +1,6 @@
 
 const Fs = require('fs/promises')
+const DATA = require('./test.json')
 
 
 const productControler = async (req,res) => {
@@ -22,11 +23,11 @@ const productControler = async (req,res) => {
   //   res.end(data)
   // })
   // console.log(data);
-  const json = await Fs.readFile('./test.json')  
-  const package = JSON.parse(json)
+  // const json = await Fs.readFile('./test.json')  
+  // const package = JSON.parse(json)
   res.status(200).json({
     success : true,
-    package
+    DATA
   })  
 }
 
